@@ -1,0 +1,25 @@
+@media (max-width: 62.5em) {
+	.title {
+		width: 5ch;
+	}
+}
+
+@media (max-width: 47em) {
+	html {
+		font-size: 90%;
+	}
+	main .container {
+		flex-direction: column;
+	}
+}
+
+@media (max-width: 31em) {
+	html {
+		font-size: 60%;
+	}
+
+	main .container {
+		justify-content: center;
+		gap: 5rem;
+	}
+}
