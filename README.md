@@ -13,3 +13,17 @@ Live link: [Link](https://gtn.darshanvaishya.xyz/)
 - Javascript
 
 Created while following the course [The Complete JavaScript Course 2022: From Zero to Expert!](https://www.udemy.com/course/the-complete-javascript-course/) from Udemy.
+
+## Screenshots
+
+Main screen
+
+![Main screen](./img/main.png)
+
+Guessed the correct number
+
+![Correct number](./img/victory.png)
+
+Game over
+
+![Game over](./img/game_over.png)
