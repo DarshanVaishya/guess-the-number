@@ -15,11 +15,17 @@
 
 @media (max-width: 31em) {
 	html {
-		font-size: 60%;
+		font-size: 75%;
 	}
 
 	main .container {
 		justify-content: center;
 		gap: 5rem;
+	}
+}
+
+@media (max-width: 25rem) {
+	html {
+		font-size: 60%;
 	}
 }
