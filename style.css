@@ -118,3 +118,7 @@ footer {
 	bottom: 10px;
 	transform: translateX(-50%);
 }
+
+.right p {
+	margin-bottom: 10px;
+}
