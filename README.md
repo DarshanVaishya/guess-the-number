@@ -1,4 +1,4 @@
-# Guess the number project (Unfinished)
+# Guess the number project (16th Dec, 2021)
 
 This project uses HTML, CSS and JS to create a simple game of guessing the number. It has a retro theme to it.
 
