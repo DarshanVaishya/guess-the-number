@@ -11,10 +11,13 @@ function displayMessage(message) {
 }
 
 let secretNumber = getRandomNumber(1, 21);
-console.log(secretNumber);
-
 const scoreEl = document.querySelector(".score");
 let score = 20;
+
+if (localStorage.getItem("highscore")) {
+	document.querySelector(".highscore").textContent =
+		localStorage.getItem("highscore");
+}
 
 document.querySelector(".check").addEventListener("click", () => {
 	if (score <= 1) {
@@ -34,8 +37,10 @@ document.querySelector(".check").addEventListener("click", () => {
 		document.querySelector(".number").style.width = "30rem";
 		document.querySelector(".number").textContent = secretNumber;
 
-		if (score > highscore)
+		if (score > highscore) {
 			document.querySelector(".highscore").textContent = score;
+			localStorage.setItem("highscore", score);
+		}
 	} else {
 		displayMessage(guess > secretNumber ? "Too high" : "Too low");
 		scoreEl.textContent = --score;
