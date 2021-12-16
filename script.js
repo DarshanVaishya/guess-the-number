@@ -24,6 +24,9 @@ document.querySelector(".check").addEventListener("click", () => {
 		displayMessage("Game over");
 		document.querySelector("body").style.backgroundColor = "red";
 		scoreEl.textContent = "0";
+
+		document.querySelector(".check").style.display = "none";
+		document.querySelector(".again").style.display = "block";
 		return;
 	}
 
@@ -31,16 +34,24 @@ document.querySelector(".check").addEventListener("click", () => {
 	if (!guess) {
 		displayMessage("No number!");
 	} else if (guess === secretNumber) {
-		const highscore = +document.querySelector(".highscore").textContent;
 		displayMessage("Correct number");
 		document.querySelector("body").style.backgroundColor = "#60b347";
-		document.querySelector(".number").style.width = "30rem";
-		document.querySelector(".number").textContent = secretNumber;
 
+		// Replacing with correct number
+		let numberEls = document.getElementsByClassName("number");
+		for (let i = 0; i < numberEls.length; i++) {
+			numberEls[i].textContent = secretNumber;
+		}
+
+		// Updating and storing the highscore
+		const highscore = +document.querySelector(".highscore").textContent;
 		if (score > highscore) {
 			document.querySelector(".highscore").textContent = score;
 			localStorage.setItem("highscore", score);
 		}
+
+		document.querySelector(".check").style.display = "none";
+		document.querySelector(".again").style.display = "block";
 	} else {
 		displayMessage(guess > secretNumber ? "Too high" : "Too low");
 		scoreEl.textContent = --score;
@@ -56,5 +67,7 @@ document.querySelector(".btn.again").addEventListener("click", () => {
 	document.querySelector("body").style.backgroundColor = "#222";
 	document.querySelector(".number").textContent = "?";
 	document.querySelector(".guess").value = "";
-	document.querySelector(".number").style.width = "15rem";
+
+	document.querySelector(".again").style.display = "none";
+	document.querySelector(".check").style.display = "block";
 });
