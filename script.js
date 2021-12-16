@@ -27,12 +27,15 @@ document.querySelector(".check").addEventListener("click", () => {
 
 		document.querySelector(".check").style.display = "none";
 		document.querySelector(".again").style.display = "block";
+		document.querySelector(".title").textContent = "Game over";
 		return;
 	}
 
 	const guess = +document.querySelector(".guess").value;
 	if (!guess) {
 		displayMessage("No number!");
+	} else if (guess < 1 || guess > 20) {
+		displayMessage("Must be between 1 and 20");
 	} else if (guess === secretNumber) {
 		displayMessage("Correct number");
 		document.querySelector("body").style.backgroundColor = "#60b347";
@@ -52,6 +55,7 @@ document.querySelector(".check").addEventListener("click", () => {
 
 		document.querySelector(".check").style.display = "none";
 		document.querySelector(".again").style.display = "block";
+		document.querySelector(".title").textContent = "Correct number";
 	} else {
 		displayMessage(guess > secretNumber ? "Too high" : "Too low");
 		scoreEl.textContent = --score;
@@ -73,4 +77,10 @@ document.querySelector(".btn.again").addEventListener("click", () => {
 
 	document.querySelector(".again").style.display = "none";
 	document.querySelector(".check").style.display = "block";
+	document.querySelector(".title").textContent = "Guess the number";
+});
+
+document.querySelector(".btn.reset").addEventListener("click", () => {
+	localStorage.removeItem("highscore");
+	document.querySelector(".highscore").textContent = "0";
 });

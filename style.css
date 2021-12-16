@@ -13,6 +13,7 @@ html {
 body {
 	color: #eee;
 	background-color: #222;
+	transition: background-color 1s linear;
 }
 
 .container {
@@ -73,6 +74,7 @@ main .container {
 .left {
 	display: flex;
 	flex-direction: column;
+	align-items: center;
 }
 
 .left .again {
@@ -121,4 +123,8 @@ footer {
 
 .right p {
 	margin-bottom: 10px;
+}
+
+.right p:last-of-type {
+	margin-bottom: 2rem;
 }
