@@ -12,8 +12,6 @@ Live link: [Link](https://gtn.darshanvaishya.xyz/)
 - CSS
 - Javascript
 
-Created while following the course [The Complete JavaScript Course 2022: From Zero to Expert!](https://www.udemy.com/course/the-complete-javascript-course/) from Udemy.
-
 ## Screenshots
 
 Main screen
@@ -27,3 +25,5 @@ Guessed the correct number
 Game over
 
 ![Game over](./img/game_over.png)
+
+Created while following the course [The Complete JavaScript Course 2022: From Zero to Expert!](https://www.udemy.com/course/the-complete-javascript-course/) from Udemy.
