@@ -128,3 +128,8 @@ footer {
 .right p:last-of-type {
 	margin-bottom: 2rem;
 }
+
+/* "Start guessing..." has 17 characters */
+.message {
+	min-width: 17ch;
+}
