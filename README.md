@@ -14,15 +14,15 @@ Live link: [Link](https://gtn.darshanvaishya.xyz/)
 
 ## Screenshots
 
-Main screen
+### Main screen
 
 ![Main screen](./img/main.png)
 
-Guessed the correct number
+### Guessed the correct number
 
 ![Correct number](./img/victory.png)
 
-Game over
+### Game over
 
 ![Game over](./img/game_over.png)
 
